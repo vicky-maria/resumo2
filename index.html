@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Goescat-Macaron-Gksu-root-terminal.ico" type="image/x-icon">
+    <title>Imagens dinâmicas</title>
+</head>
+<body>
+    <h1>&#x1F4D9;Imagens que se adaptam</h1>
+    <p>Atualmente as pessoas acessam a internet por diferentes dispositivos: celular, computador, tablet e até mesmo televisão. Sendo assim, o desenvolvedor deve criar sites que se adaptem a diferentes tipos de tela, para que o usuário tenha uma boa experiência não importa qual dispositivo esteja usando.</p>
+    <p>Hoje, nós vamos falar sobre adaptação de imagens a diferentes tipos de tela. Se colocarmos uma imagem muito grande ela pode até ficar boa no computador, mas no celular vai ser bem incômodo, já que o usuário vai ter que ficar rolando a tela pra poder ver a imagem. Fora que arquivos de imagens muito grandes deixam o site lento, o que pode fazer com que o usuário não fique muito tempo no seu site.</p>
+    <h2>&#x1F4D6; A tag &lt;picture&gt;</h2>
+    <p>A tag <strong>&lt;picture&gt;</strong> muda a imagem que é exibida de acordo com o tamanho de tela. Por exemplo, se o tamanho da tela é de 300px ela vai exibir a imagem que tem 300px.Abaixo, vc vai ver o código e a definição de cada elemento.</p>
+    <code>
+        <pre>
+    &lt;picture&gt;
+        &lt;source media"(min-width: 1000px)" srcset="imagens/imagemg.png" type="image/png"&gt;
+        &lt;source media"(min-width: 700px)" srcset="imagens/imagemm.png" type="image/png"&gt;
+        &lt;source media"(min-width: 300px)" srcset="imagens/imagemp.png" type="image/png"&gt;
+        &lt;img src="imagens/imagemg.png" alt="imagem"&gt;
+        &lt;img src="imagens/imagemm.png" alt="imagem"&gt;
+        &lt;img src="imagens/imagemp.png" alt="imagem"&gt;
+    &lt;/picture&gt;
+        </pre>
+    </code>
+    <dl>
+        <dt>&#x1F4CC; media</dt>
+        <dd>Define o tamanho necessário para que a imagem seja carregada </dd> <br>
+        <dt>&#x1F4CC; srcset</dt>
+        <dd>Nome da imagem que vai ser carregada quando tiver o tamanho necessário</dd><br>
+        <dt>&#x1F4CC; type</dt>
+        <dd>Tipo da imagem</dd>
+    </dl>
+    <p>Aumente e diminua o navegador e veja a magia acontecer.</p>
+    <picture>
+        <source media="(min-width: 1000px)" srcset="imagens/imagemg.png" type="image/png">
+        <source media="(min-width: 700px)" srcset="imagens/imagemm.png" type="image/png">
+        <source media="(min-width: 300px)" srcset="imagens/imagemp.png" type="image/png">
+        <img src="imagens/imagemg.png" alt="imagem grande">
+    </picture>
+</body>
+</html>
